@@ -16,31 +16,38 @@ void setup() {
 
 void draw() {
   background(255);
-  
+
   // option button list at top of left .
-  circle(35 * mm, 35 * mm, s_mm);
-  circle(68 * mm, 35 * mm, s_mm);
-  circle(101 * mm, 35 * mm, s_mm);
-  circle(134 * mm, 35 * mm, s_mm);
+  button(35 * mm, 35 * mm, s_mm);
+  button(68 * mm, 35 * mm, s_mm);
+  button(101 * mm, 35 * mm, s_mm);
+  button(134 * mm, 35 * mm, s_mm);
 
   // up down left right.
-  circle(45 * mm, 107 * mm, s_mm);
-  circle(78 * mm, 103 * mm, s_mm);
-  circle(111 * mm, 108* mm, s_mm);
-  circle(144 * mm, 141 * mm, l_mm);
-  
+  button(45 * mm, 107 * mm, s_mm);
+  button(78 * mm, 103 * mm, s_mm);
+  button(111 * mm, 108* mm, s_mm);
+  button(144 * mm, 141 * mm, l_mm);
+
   // attack button at  right side.
-  circle(180 * mm, 81 * mm, s_mm);
-  circle(210* mm, 72* mm, s_mm);
-  circle(240 * mm, 73 * mm, s_mm);
-  circle(270 * mm, 78 * mm, s_mm);
-  circle(180 * mm, 116 * mm, s_mm);
-  circle(210* mm, 105 * mm, s_mm);
-  circle(240 * mm, 106 * mm, s_mm);
-  circle(270 * mm, 111 * mm, s_mm);
-  
+  button(180 * mm, 81 * mm, s_mm);
+  button(210* mm, 72* mm, s_mm);
+  button(240 * mm, 73 * mm, s_mm);
+  button(270 * mm, 78 * mm, s_mm);
+  button(180 * mm, 116 * mm, s_mm);
+  button(210* mm, 105 * mm, s_mm);
+  button(240 * mm, 106 * mm, s_mm);
+  button(270 * mm, 111 * mm, s_mm);
+
   // option button at top of right.
-  circle(240 * mm, 35 * mm, l_mm);
+  button(240 * mm, 35 * mm, l_mm);
 
   save("blueprint.png");
+}
+
+void button(float x, float y, float extent) {
+  strokeWeight(1);
+  circle(x, y, extent);
+  strokeWeight(3);
+  point(x, y);
 }
